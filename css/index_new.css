@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* COLORS */
+:root {
+    /* --pastelGreen: #64D677;
+    --yellowRose: #FEF000;
+    --deepCoamaru: #2C316B;
+    --whiteSmoke: #F7F7F7;
+    --pearlyPurple: #AF6EA2; */
+
+    --ghostWhite: #F7F7FF;
+    --tusCany: #C49991;
+    --mainBlue: #4B8CDC;
+    --blackCoral: #60656F;
+    --blackCoral: #60656F;
+    --mainBlack: #131112;
+    --mainGrey: #c7c6bef8;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    background-color: var(--mainGrey);
+    position: relative;
+    /* height: 100vh; */
+    color: #333;
+}
+
+.row {
+    min-height: 70vh;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.main-box {
+width: 70vw;
+}
+
+
+.box-1 {
+    background-color: var(--tusCany);
+    padding: 62px 150px !important;
+}
+.box-2 {
+    background-color: var(--mainBlue);
+    padding: 48px 146px !important;
+
+}
+
+.player-0-panel,
+.player-1-panel {
+    /* width: 50%; */
+    /* float: left; */
+    /* height: 600px; */
+    /* padding: 100px; */
+}
+
+.player-0-panel {
+    /* padding: 8px 0; */
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: var(--pastelGreen);
+    margin-bottom: 130px;
+}
+
+.active {
+    /* background-color: #f7f7f7; */
+    background-color: var(--blackCoral);
+}
+
+.active .player-name {
+    font-weight: 300;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: var(--pastelGreen);
+    top: -7px;
+    right: 10px;
+
+}
+
+.player-current-box {
+    background-color: var(--tusCany);
+    /* color: #fff; */
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 12px;
+    padding: 8px 12px; */
+    text-align: center;
+    outline: .3rem solid var(--mainBlue);
+    /* outline-offset: 1rem; */
+
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: -41px !important;
+    margin-top: -10px !important;
+
+    font-size: 20px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+    padding-top: 0;
+    margin-top: -10px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    transition: all .3s ease;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: var(--pastelGreen);
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new {
+    top: 100px;
+    outline: none !important;
+    color: white;
+    
+}
+
+.btn-roll {
+    top: 300px;
+    outline: none !important;
+    color: white;
+}
+
+.btn-hold {
+    top: 467px;
+    margin-left: -.68rem;
+    outline: none !important;
+    color: white;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 188px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.fa-dice-d20 {
+    margin-right: 1rem;
+    color: var(--pearlyPurple);
+    font-size: 1.5rem;
+    margin-bottom: -.2rem;
+}
+
+.fa-save {
+    margin-right: 1rem;
+    color: var(--pearlyPurple);
+    font-size: 1.5rem;
+    margin-bottom: -.2rem;
+}
+
+.fa-dice {
+    margin-right: 1rem;
+    color: var(--pearlyPurple);
+    font-size: 1.5rem;
+    margin-bottom: -.2rem;
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: var(--pastelGreen);
+}
